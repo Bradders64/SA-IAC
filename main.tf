@@ -1,13 +1,13 @@
 provider "aws" {
-  region = "eu-central-1"
+  region = "eu-west-2"
 }
 
 resource "aws_vpc" "vpc" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = "10.128.0.0/16"
   enable_dns_hostnames = true
   enable_dns_support = true
   tags = {
-    "Name" = "Dummy"
+    "Name" = "Sandpit VPC"
   }
 }
 
