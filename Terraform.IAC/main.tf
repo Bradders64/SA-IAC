@@ -1,11 +1,19 @@
+# My Code
+
 # The following configures the provider in this instance this changes it to be AWS.
 provider "aws" {
     # This defines the region that is being configured.
     region = "eu-west-2"
     }
 
+# Example Code
+
+provider "aws" {
+  region = "eu-west-2"
+}
 
 
+# My Code
 
 resource "aws_vpc" "sandpit_vpc" {
 
@@ -20,6 +28,51 @@ resource "aws_vpc" "sandpit_vpc" {
   }
 }
 
+# Example Code
+resource "aws_vpc" "sandpit_vpc" {
+  cidr_block = "10.128.0.0/16"
+  enable_dns_hostnames = true
+  enable_dns_support = true
+  tags = {
+    "Name" = "Sandpit VPC"
+  }
+}
+
+data "aws_availability_zones" "available" {}
+
+resource "aws_subnet" "instance" {
+  availability_zone = data.aws_availability_zones.available.names[0]
+  cidr_block = "10.0.1.0/24"
+  vpc_id = aws_vpc.sandpit_vpc.id
+  tags = {
+    "Name" = "DummySubnetInstance"
+  }
+}
+
+# My Code (Not covered in code as done in a different method we need to ensure that all of the SSH stuff is removed.
+
+# Example Code
+
+resource "tls_private_key" "ssh" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
+resource "aws_key_pair" "ssh" {
+  key_name = "DummyMachine"
+  public_key = tls_private_key.ssh.public_key_openssh
+}
+
+output "ssh_private_key_pem" {
+  value = tls_private_key.ssh.private_key_pem
+}
+
+output "ssh_public_key_pem" {
+  value = tls_private_key.ssh.public_key_pem
+}
+
+# My Code
+
 resource "aws_internet_gateway" "sandpit_gw" {
     vpc_id = "${aws_vpc.sandpit_vpc.id}"
 
@@ -28,6 +81,10 @@ resource "aws_internet_gateway" "sandpit_gw" {
     }
   
 }
+
+# My Code
+
+# My Code
 
 resource "aws_subnet" "sandpit_subnet-2a" {
     vpc_id = "${aws_vpc.sandpit_vpc.id}"
@@ -43,7 +100,9 @@ resource "aws_subnet" "sandpit_subnet-2a" {
     }
 }
 
+# My Code
 
+# My Code
 resource "aws_nat_gateway" "example" {
   #allocation_id = aws_eip.example.id
   subnet_id     = "${aws_subnet.sandpit_subnet-2a.id}"
@@ -57,7 +116,9 @@ resource "aws_nat_gateway" "example" {
   depends_on = [aws_internet_gateway.sandpit_gw]
 }
 
+# My Code
 
+# My Code
 
 
 resource "aws_instance" "openvpn" {
@@ -77,6 +138,10 @@ resource "aws_instance" "openvpn" {
     }
 }
 
+# My Code
+
+# My Code
+
 resource "aws_instance" "Dev-Test" {
     subnet_id = aws_subnet.sandpit_subnet-2a.id
     ami = "ami-0ebb4b3e90d89aca4"
@@ -94,16 +159,27 @@ resource "aws_instance" "Dev-Test" {
     }
 }
 
+
+# My Code
+
+# My Code
 resource "aws_eip" "ip-dev-test" {
     instance = "${aws_instance.Dev-Test.id}"
     vpc = true
 }
 
+
+# My Code
+
+# My Code
 resource "aws_eip" "ip-openvpn" {
     instance = "${aws_instance.openvpn.id}"
     vpc = true
 }
 
+# My Code
+
+# My Code
 resource "aws_route_table" "sandpit_routing_2a" {
     vpc_id = "${aws_vpc.sandpit_vpc.id}"
     route {
@@ -115,11 +191,17 @@ resource "aws_route_table" "sandpit_routing_2a" {
     }
 }
 
+# My Code
+
+# My Code
 resource "aws_route_table_association" "subnet-association" {
     subnet_id = "${aws_subnet.sandpit_subnet-2a.id}"
     route_table_id = "${aws_route_table.sandpit_routing_2a.id}"
 }
 
+# My Code
+
+# My Code
 resource "aws_vpn_gateway" "sandpit_vpn_gateway" { 
     vpc_id = "${aws_vpc.sandpit_vpc.id}"
 
@@ -128,11 +210,17 @@ resource "aws_vpn_gateway" "sandpit_vpn_gateway" {
     }
 }
 
+# My Code
+
+# My Code
 resource "aws_network_interface" "Sandpit-White-List-IP"{
     subnet_id = "${aws_subnet.sandpit_subnet-2a.id}"
     private_ips = ["10.128.0.10","10.128.0.11"]
 }
 
+# My Code
+
+# My Code
 resource "aws_eip" "Sandpit_One" {
     vpc = true
     network_interface = "${aws_network_interface.Sandpit-White-List-IP.id}"
@@ -140,6 +228,9 @@ resource "aws_eip" "Sandpit_One" {
   
 }
 
+# My Code
+
+# My Code
 resource "aws_eip" "Sandpit_Two" {
     vpc = true
     network_interface = "${aws_network_interface.Sandpit-White-List-IP.id}"
