@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-06-08T15:41:02.207Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="TbiB4Me0jsjnxpjQUQuc" version="18.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-06-08T15:49:21.565Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" etag="Za3HctfH2MLfM6iQqJxm" version="18.1.2" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="1372" dy="874" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -59,6 +59,66 @@
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="980" y="200" as="sourcePoint" />
             <mxPoint x="1030" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-17" value="Training" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="120" y="360" width="460" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-18" value="Securing and Protecting Your Data in Amazon Simple Storage Service (Amazon S3)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Y_n05oMmpvybOQXfyTw_-17">
+          <mxGeometry y="30" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-19" value="Getting Started with AWS Security, Identity, and Compliance" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;" vertex="1" parent="Y_n05oMmpvybOQXfyTw_-17">
+          <mxGeometry y="60" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-20" value="Can we use AWS for 6203 Compliance?" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontColor=#FF0000;" vertex="1" parent="Y_n05oMmpvybOQXfyTw_-17">
+          <mxGeometry y="90" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-21" value="Configuration Descisions" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#FF0000;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="660" y="360" width="230" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-22" value="Monitor Criteria" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontColor=#FF0000;" vertex="1" parent="Y_n05oMmpvybOQXfyTw_-21">
+          <mxGeometry y="30" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-23" value="Threshold Values (Derm autoscale)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontColor=#FF0000;" vertex="1" parent="Y_n05oMmpvybOQXfyTw_-21">
+          <mxGeometry y="60" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-24" value="GuardDuty Alerts" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontColor=#FF0000;" vertex="1" parent="Y_n05oMmpvybOQXfyTw_-21">
+          <mxGeometry y="90" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-25" value="Outputs" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontColor=#FF0000;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1040" y="360" width="230" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-26" value="Ticket Flood" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontColor=#FF0000;" vertex="1" parent="Y_n05oMmpvybOQXfyTw_-25">
+          <mxGeometry y="30" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-27" value="Ticket Owner" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontColor=#FF0000;" vertex="1" parent="Y_n05oMmpvybOQXfyTw_-25">
+          <mxGeometry y="60" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-28" value="Single Instance or separate Jira" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;fontColor=#FF0000;" vertex="1" parent="Y_n05oMmpvybOQXfyTw_-25">
+          <mxGeometry y="90" width="230" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-31" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontColor=#FF0000;entryX=-0.017;entryY=0.3;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="Y_n05oMmpvybOQXfyTw_-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="430" as="sourcePoint" />
+            <mxPoint x="630" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-32" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontColor=#FF0000;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="890" y="430" as="sourcePoint" />
+            <mxPoint x="1030" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-33" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontColor=#FF0000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Y_n05oMmpvybOQXfyTw_-21" target="Y_n05oMmpvybOQXfyTw_-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="330" as="sourcePoint" />
+            <mxPoint x="720" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Y_n05oMmpvybOQXfyTw_-34" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;fontColor=#FF0000;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="Y_n05oMmpvybOQXfyTw_-25" target="Y_n05oMmpvybOQXfyTw_-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1120" y="330" as="sourcePoint" />
+            <mxPoint x="1170" y="280" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
